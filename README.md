@@ -5,8 +5,8 @@
   Katalogų struktūra:
   
   APK  
-  +--Programa  
-  |  
   +--Duomenų bazė  
+  |  
+  +--Programa  
   |  
   +--README.md  
