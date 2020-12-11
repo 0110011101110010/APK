@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A27D91A6-0467-4484-948D-B47FD3F2EAF1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>akademine_sistema</RootNamespace>
+    <AssemblyName>akademine_sistema</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Backend\Models\Admin.cs" />
+    <Compile Include="Backend\Models\Grade.cs" />
+    <Compile Include="Backend\Models\Group.cs" />
+    <Compile Include="Backend\Models\Subject.cs" />
+    <Compile Include="Backend\Other\AdminControl\AdminMenuControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\AdminMenuControl.Designer.cs">
+      <DependentUpon>AdminMenuControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Groups\AdminControlGroupsAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Groups\AdminControlGroupsAdd.Designer.cs">
+      <DependentUpon>AdminControlGroupsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Groups\AdminControlGroupsRemove.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Groups\AdminControlGroupsRemove.Designer.cs">
+      <DependentUpon>AdminControlGroupsRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Groups\AdminMenuControlGroups.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Groups\AdminMenuControlGroups.Designer.cs">
+      <DependentUpon>AdminMenuControlGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Students\AdminControlStudentsAttach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Students\AdminControlStudentsAttach.Designer.cs">
+      <DependentUpon>AdminControlStudentsAttach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Students\AdminMenuControlStudents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Students\AdminMenuControlStudents.Designer.cs">
+      <DependentUpon>AdminMenuControlStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Students\AdminControlStudentsAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Students\AdminControlStudentsAdd.Designer.cs">
+      <DependentUpon>AdminControlStudentsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Students\AdminControlStudentsRemove.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Students\AdminControlStudentsRemove.Designer.cs">
+      <DependentUpon>AdminControlStudentsRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Subjects\AdminControlSubjectsAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Subjects\AdminControlSubjectsAdd.Designer.cs">
+      <DependentUpon>AdminControlSubjectsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Subjects\AdminControlSubjectsAttach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Subjects\AdminControlSubjectsAttach.Designer.cs">
+      <DependentUpon>AdminControlSubjectsAttach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Subjects\AdminControlSubjectsRemove.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Subjects\AdminControlSubjectsRemove.Designer.cs">
+      <DependentUpon>AdminControlSubjectsRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Subjects\AdminMenuControlSubjects.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Subjects\AdminMenuControlSubjects.Designer.cs">
+      <DependentUpon>AdminMenuControlSubjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Teachers\AdminControlTeachersAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Teachers\AdminControlTeachersAdd.Designer.cs">
+      <DependentUpon>AdminControlTeachersAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Teachers\AdminControlTeachersAttach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Teachers\AdminControlTeachersAttach.Designer.cs">
+      <DependentUpon>AdminControlTeachersAttach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Teachers\AdminControlTeachersRemove.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Teachers\AdminControlTeachersRemove.Designer.cs">
+      <DependentUpon>AdminControlTeachersRemove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Teachers\AdminMenuControlTeachers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Backend\Other\AdminControl\Teachers\AdminMenuControlTeachers.Designer.cs">
+      <DependentUpon>AdminMenuControlTeachers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Other\GradePublicControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Backend\Other\GradePublicControl.Designer.cs">
+      <DependentUpon>GradePublicControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Other\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backend\Other\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Models\Person.cs" />
+    <Compile Include="Backend\Other\Program.cs" />
+    <Compile Include="Backend\Repositories\GradesRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Backend\Models\Student.cs" />
+    <Compile Include="Backend\Models\Teacher.cs" />
+    <Compile Include="Backend\Models\User.cs" />
+    <Compile Include="Backend\Other\Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Backend\Other\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backend\Repositories\UsersRepository.cs" />
+    <EmbeddedResource Include="Backend\Other\AdminControl\AdminMenuControl.resx">
+      <DependentUpon>AdminMenuControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Other\AdminControl\Groups\AdminControlGroupsAdd.resx">
+      <DependentUpon>AdminControlGroupsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Other\AdminControl\Groups\AdminControlGroupsRemove.resx">
+      <DependentUpon>AdminControlGroupsRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Other\AdminControl\Groups\AdminMenuControlGroups.resx">
+      <DependentUpon>AdminMenuControlGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Other\AdminControl\Students\AdminControlStudentsAttach.resx">
+      <DependentUpon>AdminControlStudentsAttach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Other\AdminControl\Students\AdminControlStudentsRemove.resx">
+      <DependentUpon>AdminControlStudentsRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Other\AdminControl\Students\AdminMenuControlStudents.resx">
+      <DependentUpon>AdminMenuControlStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Other\AdminControl\Students\AdminControlStudentsAdd.resx">
+      <DependentUpon>AdminControlStudentsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Other\AdminControl\Subjects\AdminControlSubjectsAdd.resx">
+      <DependentUpon>AdminControlSubjectsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Other\AdminControl\Subjects\AdminControlSubjectsAttach.resx">
+      <DependentUpon>AdminControlSubjectsAttach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Other\AdminControl\Subjects\AdminControlSubjectsRemove.resx">
+      <DependentUpon>AdminControlSubjectsRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Other\AdminControl\Subjects\AdminMenuControlSubjects.resx">
+      <DependentUpon>AdminMenuControlSubjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Other\AdminControl\Teachers\AdminControlTeachersAdd.resx">
+      <DependentUpon>AdminControlTeachersAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Other\AdminControl\Teachers\AdminControlTeachersAttach.resx">
+      <DependentUpon>AdminControlTeachersAttach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Other\AdminControl\Teachers\AdminControlTeachersRemove.resx">
+      <DependentUpon>AdminControlTeachersRemove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Other\AdminControl\Teachers\AdminMenuControlTeachers.resx">
+      <DependentUpon>AdminMenuControlTeachers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Other\GradePublicControl.resx">
+      <DependentUpon>GradePublicControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Other\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backend\Other\MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
