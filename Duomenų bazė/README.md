@@ -1,2 +1,1 @@
-DB  
-DB
+# Kalba: SQL (Microsoft SQL Management)
