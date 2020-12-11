@@ -1,2 +1,2 @@
-DB \n
+DB  
 DB
